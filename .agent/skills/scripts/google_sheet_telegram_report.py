@@ -249,8 +249,9 @@ def main() -> None:
                 send_telegram_message(
                     build_telegram_message("SUCCESS", row_num, noi_dung, tieu_de, hinh_anh, detail)
                 )
+                worksheet.update_cell(row_num, status_col, "POSTED")
                 print("Da gui Telegram thanh cong.")
-                print(f"Giu nguyen trang thai tren dong {row_num} de nguoi dung tu xu ly.")
+                print(f"Da cap nhat trang thai dong {row_num} thanh POSTED.")
                 print("\n--- HOAN TAT XU LY 1 DONG ---")
                 break
 
